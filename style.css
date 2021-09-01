@@ -49,7 +49,7 @@ b{
 .income,
 .outcome{
     margin: 1em;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid hsl(0, 2%, 25%);
 }
 
 button{
@@ -65,25 +65,29 @@ button{
     cursor: pointer;
 }
 
+button:active{
+    background-color: hsl(214, 65%, 30%);
+}
+
 .income p,
 .outcome p{
     margin: 1em;
 }
 
-.incomep{
+.income p{
     color: green;
 }
-.incomep::before{
+.income p::before{
     content: '+';
     margin-right: 5px;
 }
 
-.outcomep::before{
+.outcome p::before{
     content: '-';
     margin-right: 5px;
 }
 
-.outcomep{
+.outcome p{
     color: red;
 }
 
@@ -96,7 +100,7 @@ button{
 
     .income,
     .outcome{
-        border: 1px solid black;
+        border: 1px solid hsl(0, 2%, 25%);
         padding: 1em;
     }
 }
