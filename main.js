@@ -1,9 +1,9 @@
 let total = document.getElementById('total');
+
+
 let namein = document.getElementById('namein');
 let income = document.getElementById('income');
 let addincome = document.getElementById('addincome');
-
-
 
 // Ajout d'un élément dans le revenu
 
@@ -25,7 +25,7 @@ addincome.addEventListener('click', function(e){
 
 // Ajout d'un élément dans les dépenses
 
-let nameout = document.getElementById('namein');
+let nameout = document.getElementById('nameout');
 let outcome = document.getElementById('outcome');
 let addoutcome = document.getElementById('addoutcome');
 
@@ -33,10 +33,10 @@ addoutcome.addEventListener('click', function(e){
     e.preventDefault();
     let div = document.getElementById('outcomediv');
 
-    let newname = document.createElement('h4');
-    newname.id ='new1';
-    newname.textContent = nameout.value;
-    div.appendChild(newname);
+    let newnameout = document.createElement('h4');
+    newnameout.id ='new1';
+    newnameout.textContent = nameout.value;
+    div.appendChild(newnameout);
 
     let newoutcome = document.createElement('p');
     newoutcome.id = 'new2';
