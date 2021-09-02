@@ -13,11 +13,13 @@
         
         <div class="total">
             <h2>Total</h2>
-            <p id="total">Test</p>
+            <p id="total"></p>
         </div>
         
-        <div class="income">
-            <label for="income">Revenus</label>
+        <form class="income">
+            <label for="name">Libellé</label>
+            <input type="text" name="namein" id="namein">
+            <label for="income">Montant</label>
             <input type="number" name="income" id="income" step="any">
             <button id="addincome" for='income'>Ajouter</button>
 
@@ -25,15 +27,17 @@
                 
             </div>
 
-            <div>
+            <div class="total">
                 <h3>Total revenus</h3>
-                <p>test</p>
+                <p id="rtotal"></p>
             </div>
 
-        </div>
+        </form>
 
-        <div class="outcome">
-            <label for="outcome">Dépenses</label>
+        <form class="outcome">
+            <label for="name">Libellé</label>
+            <input type="text" name="nameout" id="nameout">
+            <label for="outcome">Montant</label>
             <input type="number" name="outcome" id="outcome" step="any">
             <button id="addoutcome" for='outcome'>Ajouter</button>
 
@@ -41,12 +45,12 @@
                 
             </div>
 
-            <div>
-                <h3>Total dépences</h3>
-                <p>test</p>
+            <div class="total">
+                <h3>Total dépenses</h3>
+                <p id="dtotal"></p>
             </div>
 
-        </div>
+        </form>
 
     </div>
     <script src="main.js"></script>

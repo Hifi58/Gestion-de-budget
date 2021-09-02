@@ -1,29 +1,45 @@
-let income = document.getElementById('income').value;
-let outcome = document.getElementById('outcome').value;
 let total = document.getElementById('total');
+let namein = document.getElementById('namein');
+let income = document.getElementById('income');
 let addincome = document.getElementById('addincome');
-let addoutcome = document.getElementById('addoutcome');
 
-const newincome = document.createElement("p");
-const newincomecontent = document.createTextNode(income);
-newincome.appendChild(newincomecontent);
+
 
 // Ajout d'un élément dans le revenu
 
-addincome.addEventListener('click', function(){
-    const incomediv = document.getElementById('incomediv');
-    incomediv.appendChild(newincome);
-    console.log(income);
+addincome.addEventListener('click', function(e){
+    e.preventDefault();
+    let div = document.getElementById('incomediv');
+
+    let newname = document.createElement('h4');
+    newname.id ='new1';
+    newname.textContent = namein.value;
+    div.appendChild(newname);
+
+    let newincome = document.createElement('p');
+    newincome.id = 'new2';
+    newincome.textContent = income.value;
+    div.appendChild(newincome);
 });
+
 
 // Ajout d'un élément dans les dépenses
 
-const newoutcome = document.createElement("p");
-const newoutcomecontent = document.createTextNode(Number(outcome));
-newoutcome.appendChild(newoutcomecontent);
+let nameout = document.getElementById('namein');
+let outcome = document.getElementById('outcome');
+let addoutcome = document.getElementById('addoutcome');
 
-addoutcome.addEventListener('click', function(){
-    const outcomediv = document.getElementById('outcomediv');
-    outcomediv.appendChild(newoutcome);
-    console.log(outcome);
+addoutcome.addEventListener('click', function(e){
+    e.preventDefault();
+    let div = document.getElementById('outcomediv');
+
+    let newname = document.createElement('h4');
+    newname.id ='new1';
+    newname.textContent = nameout.value;
+    div.appendChild(newname);
+
+    let newoutcome = document.createElement('p');
+    newoutcome.id = 'new2';
+    newoutcome.textContent = outcome.value;
+    div.appendChild(newoutcome);
 });
