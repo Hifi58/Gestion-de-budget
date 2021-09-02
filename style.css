@@ -87,6 +87,16 @@ button:active{
     margin-right: 5px;
 }
 
+.income p::after,
+.outcome p::after{
+    content:'€';
+}
+
+#rtotal::before,
+#dtotal::before{
+    content: '';
+}
+
 .outcome p{
     color: red;
 }
