@@ -9,25 +9,31 @@
 </head>
 <body>
     <h1><b>B</b>udget facile</h1>
+    
+    <div class="total">
+        <h2>Total</h2>
+        <p id="total"></p>
+    </div>
     <div class="container">
         
-        <div class="total">
-            <h2>Total</h2>
-            <p id="total"></p>
-        </div>
+        
         
         <form class="income">
-            <label for="name">Libellé</label>
-            <input type="text" name="namein" id="namein">
-            <label for="income">Montant</label>
-            <input type="number" name="income" id="income" step="any">
-            <button id="addincome" for='income'>Ajouter</button>
-
-            <div id="incomediv">
-                
+            <div class=inputflex>
+                <label for="namein">Libellé</label>
+                <input type="text" name="namein" id="namein">
             </div>
+            <div class=inputflex>
+                <label for="income">Montant</label>
+                <input type="number" name="income" id="income" step="any">
+            </div>
+            <button id="addincome" for='income'>Ajouter</button>
+            <div class="containerbudget">
+                <div id="incomediv" class="budget">
 
-            <div class="total">
+                </div>
+            </div>
+            <div class="soustotal">
                 <h3>Total revenus</h3>
                 <p id="rtotal"></p>
             </div>
@@ -35,17 +41,22 @@
         </form>
 
         <form class="outcome">
-            <label for="name">Libellé</label>
-            <input type="text" name="nameout" id="nameout">
-            <label for="outcome">Montant</label>
-            <input type="number" name="outcome" id="outcome" step="any">
+            <div class=inputflex>
+                <label for="nameout">Libellé</label>
+                <input type="text" name="nameout" id="nameout">
+            </div>
+            <div class=inputflex>
+                <label for="outcome">Montant</label>
+                <input type="number" name="outcome" id="outcome" step="any">
+            </div>
             <button id="addoutcome" for='outcome'>Ajouter</button>
+            <div class="containerbudget">
+                <div id="outcomediv" class="budget">
 
-            <div id="outcomediv">
-                
+                </div>
             </div>
 
-            <div class="total">
+            <div class="soustotal">
                 <h3>Total dépenses</h3>
                 <p id="dtotal"></p>
             </div>

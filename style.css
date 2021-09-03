@@ -3,7 +3,7 @@ Sommaire
 
 1) Paramètres de page
 2) Corps de page
-
+3) Media Queries
 ***********************/
 
 /***********************
@@ -19,7 +19,8 @@ Sommaire
 
 body{
     font-family: 'Roboto Condensed', sans-serif;
-    background-color: whitesmoke;
+    background-color: rgb(245, 245, 245);
+    letter-spacing: 2px;
 }
 
 /***********************
@@ -35,21 +36,36 @@ b{
     color: hsl(214, 65%, 49%);
 }
 
-.total{
-    margin: 1em;
-}
-
 .container{
-    margin: 1em;
+    margin-top: 1em;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: center;
 }
 
 .income,
 .outcome{
     margin: 1em;
     border-bottom: 1px solid hsl(0, 2%, 25%);
+}
+
+form input{
+    padding-block: 0.5em;
+    font-size: 1.02em;
+}
+
+
+input{
+    border: none;
+    background-color: whitesmoke;
+    border-bottom: 2px solid black;
+    border-radius: 2px;
+    margin-bottom: 1em;
+}
+
+input:focus{
+    outline: none;
+    border-bottom: 2px solid hsl(214, 65%, 49%);
 }
 
 button{
@@ -101,27 +117,95 @@ button:active{
     color: red;
 }
 
-@media screen and (min-width: 460px) {
+.total{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-inline: 2em;
+    font-size: 1.5em;
+}
 
-    
+#total::after{
+    content: '€';
+}
+
+.inputflex{
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+        justify-content: space-between;
+
+    }
+
+/***********************
+    3) Media Queries
+***********************/
+@media screen and (min-width: 280px) {
+
     .container{
         align-items: center;
+        margin: 0;
     }
+
+    label{
+        margin-right: 1em;
+    }
+
+    form input{
+        padding-inline: 2.5em;
+    }
+    
+}
+
+@media screen and (min-width: 460px) {
+
 
     .income,
     .outcome{
         border: 1px solid black;
+        border-radius: 3px;
         padding: 1em;
+    }
+
+    .inputflex{
+        flex-direction: row;
+    }
+
+    #budget{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .soustotal{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .containerbudget{
+    display: flex;
+    flex-direction: column;
     }
 }
 
 @media screen and (min-width: 768px) {
 
+    h1{
+        text-align: start;
+    }
     
     .container{
         flex-direction: row;
         margin: auto;
+        justify-content: center;
     }
+
+    form input{
+        padding-inline: 0;
+    }
+
+    
 }
 
 @media screen and (min-width: 850px) {
